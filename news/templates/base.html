@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"><a href="/">News</a></div>
+            <div class="navbar">
+                <a href="#uzbekistan">O'zbekiston</a>
+                <a href="#Jahon">Jahon</a>
+                <a href="#texno">Fan-texnika</a>
+                <a href="#Sport">Sport</a>
+                <a href="#sanat">San'at</a>
+            </div>
+        </div>
+        
+        <div class="main">
+            {% block content %}{% endblock content %}            
+        </div>
+
+
+        <div class="footer">
+            <div class="logo"><a href="/">News</a></div>
+            <div class="navbar">
+                <a href="#about">Sayt haqida</a>
+                <a href="#contact">Aloqa</a>
+                <a href="#ad">Reklama</a>
+                <a href="#Team">Jamoa</a>
+            </div>
+            <p>News saytida eʼlon qilingan materiallardan nusxa koʻchirish, tarqatish va boshqa shakllarda foydalanish faqat tahririyat yozma roziligi bilan amalga oshirilishi mumkin. <br>
+                © Barcha huquqlar himoyalangan.
+            </p>
+        </div>
+    </div>
+
+    {% block script %}{% endblock script %}
+</body>
+</html>
+    

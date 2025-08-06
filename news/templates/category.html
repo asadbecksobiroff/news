@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Category {{ name }} {% endblock title %}
+
+{% block content %}
+    <h2 style="margin-left: 10px;">#{{ name }} </h2>
+    {% for post in news %}
+        <div class="news hover" onclick="location = '/news/{{ post.id }}'">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.summary }}</p>
+            <p>{{ post.date }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
