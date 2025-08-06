@@ -1,4 +1,4 @@
 # news
-python manage.py makemigrations
-python manage.py migrate
-Run: python manage.py runserver
+python manage.py makemigrations <br>
+python manage.py migrate <br>
+# Run: python manage.py runserver
